@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #ebebeb69;
+}
+
+/* ------------------------------------HEADER------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+header {
+  padding: 20px;
+}
+header img {
+  width: 70px;
+  float: left;
+  margin: 10px;
+}
+header h1 {
+  padding: 25px 0;
+}
+
+/* ------------------------------------MAIN------------------------------------ */
+
+/* ---------------------------------------------------------------------------- */
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* Animation when page loads */
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ------------------------------------SIDE LOGO------------------------------------ */
+.logo-container {
+  margin: auto 0px;
+}
+.logo-container > img {
+  width: 500px;
+}
+
+/* ------------------------------------BOOK PAGE------------------------------------ */
+.grid-container {
+  background: #ffffff;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 90px 550px;
+  grid-template-rows: 85px auto 40px;
+  gap: 2px 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.item1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  border-right: solid 1px #ff69b4;
+  border-bottom: solid 2px #ff69b4;
+}
+.item2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  border-left: solid 1px #ff69b4;
+  border-bottom: solid 2px #ff69b4;
+}
+.item3 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  border-top: solid 2px #ff69b4;
+  border-right: solid 1px #ff69b4;
+}
+.item4 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  border-top: solid 2px #ff69b4;
+  border-left: solid 1px #ff69b4;
+}
+.item5 {
+  border-top: 2px black dashed;
+  border-right: solid 1px #ff69b4;
+}
+.item6 {
+  border-left: solid 1px #ff69b4;
+  border-top: 2px black dashed;
+}
+.head {
+  display: inline-block;
+  margin: auto 5px;
+  padding: 0 10px;
+  padding-top: 30px;
+  font-size: 36px;
+}
+.date-box {
+  float: right;
+  margin: 8px 5px;
+  padding: 0 10px;
+  text-decoration: underline;
+}
+.gap-addingtask {
+  border-bottom: solid 1.5px black;
+  height: 52.8px;
+}
+.adding-task {
+  padding: 10px 15px;
+  border-bottom: solid 1.5px black;
+  display: flex;
+}
+#task-input {
+  height: 32px;
+  padding: 5px 15px;
+  font-size: 16px;
+  resize: none;
+  overflow: hidden;
+  flex-grow: 10;
+}
+#task-input:focus {
+  outline: none;
+}
+#task-add-btn {
+  margin: 0 5px;
+  border: none;
+  background-color: #d6d6d6;
+  flex-grow: 2;
+}
+#task-add-btn:hover {
+  background-color: black;
+  color: white;
+}
+#all-task-list {
+  height: 400px;
+  overflow: scroll;
+}
+#all-task-list::-webkit-scrollbar {
+  width: 10px;
+}
+#all-task-list::-webkit-scrollbar-thumb {
+  background: #80808080;
+  border-radius: 2px;
+}
+
+.task-wrapper {
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px;
+  border-bottom: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkbox {
+  margin-right: 10px;
+}
+.checkbox:checked ~ span {
+  font-style: italic;
+  text-decoration: line-through;
+  color: red;
+}
+.task-note {
+  margin: 0 10px;
+  color: #0069d9;
+}
+.time {
+  background-color: #0069d9;
+  color: #fff;
+  padding: 2px 5px;
+}
+.delete-button {
+  align-self: self-start;
+  background-color: transparent;
+  border: 0;
+}
+.delete-button:hover {
+  color: red;
+}
+
+#btns {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.other-btns {
+  padding: 5px 10px;
+  border: none;
+  background-color: #d6d6d6;
+}
+.other-btns:hover {
+  color: #ffffff;
+  background: #000000;
+}
+
+#popup {
+  height: 150px;
+  width: 400px;
+  border-radius: 8px;
+  background-color: #939393;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+#popup p {
+  font-size: 20px;
+  margin: 20px;
+}
+.popup-btn-container {
+  height: 60%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#popup button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 30px;
+}
+#okay-btn {
+  background: #007bff;
+  color: white;
+}
+#okay-btn:hover {
+  background-color: #0069d9;
+}
+#cancel-btn:hover {
+  background-color: #d6d6d6;
+}

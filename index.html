@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <img src="./img/todo-logo.png" alt="todo-list-webapp-logo" />
+      <h1 class="todo-list-logo">To-do List</h1>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+        <!-- SIDE LOGO -->
+        <div class="logo-container">
+          <img src="./img/app-logo.png" alt="logo" />
+        </div>
+        <!-- The main system  -->
+        <div class="grid-container">
+          <div class="grid-item item1"></div>
+          <div class="grid-item item2">
+            <h2 class="head">Tasks</h2>
+            <div class="date-box">
+              <p>
+                Date:
+                <span id="date"></span>: <span id="month"></span>:
+                <span id="year"></span>
+              </p>
+            </div>
+          </div>
+          <div class="grid-item item3">
+            <div class="gap-addingtask"></div>
+          </div>
+          <!-- Main body of todo list -->
+          <div class="grid-item item4">
+            <div class="body">
+              <!-- Adding new tasks -->
+              <p class="adding-task">
+                <textarea
+                  name="tasks"
+                  id="task-input"
+                  placeholder="Add a new task.."
+                  minlength="1"
+                  maxlength="500"
+                ></textarea>
+                <button id="task-add-btn">Add</button>
+              </p>
+            </div>
+            <!-- This div contains all the tasks you add -->
+            <div id="all-task-list"></div>
+          </div>
+          <div class="grid-item item5"></div>
+          <!-- Buttons for Quick Actions -->
+          <div class="grid-item item6">
+            <div id="btns">
+              <button class="other-btns" id="delete-all-tasks">
+                Delete All
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- pop-up -->
+        <div id="popup">
+          <p>
+            Are you sure you want to
+            <span id="changing-text"></span>
+          </p>
+          <hr />
+          <div class="popup-btn-container">
+            <button id="okay-btn">Okay</button>
+            <button id="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="js/script.js"></script>
+</html>

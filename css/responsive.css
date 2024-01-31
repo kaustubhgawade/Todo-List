@@ -1,0 +1,67 @@
+@media screen and (max-width: 1200px) {
+  .logo-container > img {
+    width: 350px;
+  }
+  .grid-container {
+    grid-template-columns: 75px 450px;
+    grid-template-rows: 85px auto 35px;
+  }
+  .task-wrapper {
+    width: 380px;
+    margin: 5px auto;
+  }
+}
+@media screen and (max-width: 940px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-container {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .logo-container > img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  .grid-container {
+    grid-template-columns: 0 310px;
+    grid-template-rows: 55px auto 35px;
+    margin-bottom: 60px;
+  }
+  .grid-container > .item2,
+  .item4,
+  .item6 {
+    border-left: white solid 1px;
+  }
+  .head {
+    margin: auto 5px;
+    padding: 0 10px;
+    padding-top: 20px;
+    font-size: 26px;
+  }
+  .adding-task {
+    display: flex;
+  }
+  .adding-task {
+    padding: 15px 10px;
+  }
+  #task-add-btn {
+    width: 50px;
+  }
+  .task-wrapper {
+    width: 260px;
+    margin: 5px auto;
+  }
+  #all-task-list {
+    height: 360px;
+  }
+  .other-btns {
+    padding: 2px 0;
+    width: 88px;
+  }
+}
