@@ -38,10 +38,7 @@ function addNewTask() {
     taskNote.classList.add("task-note");
 
     let time = document.createElement("span");
-    let currHour = date.getHours();
-    let currMin = date.getMinutes();
-    let timeText = `${currHour}:${currMin}`;
-    time.textContent = timeText;
+    time.textContent = `${date.getHours()}:${date.getMinutes()}`;
     time.classList.add("time");
 
     let deleteBtn = document.createElement("button");
@@ -79,8 +76,11 @@ function updateTaskStyle(checkbox, taskNote) {
 
 function saveTasks() {
   const tasks = Array.from(allTaskList.children).map((taskWrapper) => {
+    console.log(taskWrapper);
+
     const taskNote = taskWrapper.querySelector(".task-note");
     const checkbox = taskWrapper.querySelector(".checkbox");
+    const time = taskWrapper.querySelector(".time");
 
     return {
       content: taskNote.textContent,
