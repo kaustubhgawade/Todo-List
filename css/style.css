@@ -34,7 +34,6 @@ header h1 {
   margin: 20px;
   display: flex;
   justify-content: space-around;
-  /* Animation when page loads */
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
 }
@@ -174,7 +173,9 @@ header h1 {
   color: #0069d9;
 }
 .time {
-  background-color: #0069d9;
+  background-color: #000;
+  border-radius: 5px;
+  border-bottom: 2px solid grey;
   color: #fff;
   padding: 2px 5px;
 }
@@ -203,43 +204,4 @@ header h1 {
 .other-btns:hover {
   color: #ffffff;
   background: #000000;
-}
-
-#popup {
-  height: 150px;
-  width: 400px;
-  border-radius: 8px;
-  background-color: #939393;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-}
-#popup p {
-  font-size: 20px;
-  margin: 20px;
-}
-.popup-btn-container {
-  height: 60%;
-  padding: 0 15px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-#popup button {
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 10px 30px;
-}
-#okay-btn {
-  background: #007bff;
-  color: white;
-}
-#okay-btn:hover {
-  background-color: #0069d9;
-}
-#cancel-btn:hover {
-  background-color: #d6d6d6;
 }
